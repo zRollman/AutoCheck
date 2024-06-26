@@ -15,7 +15,7 @@
          Ryutaro Himeno, Dr. of Eng.
          Head of Computer Information Center, 
          The Institute of Pysical and Chemical Research (RIKEN)
-         Email : himeno@postman.riken.go.jp
+         Email : Himeno@postman.riken.go.jp
       ---------------------------------------------------------------
       You can adjust the size of this benchmark code to fit your target
       computer.  In that case, please chose following sets of 

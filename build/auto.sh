@@ -8,7 +8,7 @@ if [[ ! -d $testPath ]]; then
 	mkdir -p "$testPath"
 fi
 
-#himeno
+#Himeno
 export ENABLE_OPENMP="off"
 export TRACE_FILE_HOME="/workspace/AutoCheck/tracefile/serial/himeno"
 export FUNCTION_NAME="jacobi"

@@ -1,4 +1,4 @@
-# Install script for directory: /workspace/Benchmarks/checkpoint/himeno
+# Install script for directory: /workspace/Benchmarks/checkpoint/Himeno
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

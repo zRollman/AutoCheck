@@ -111,7 +111,7 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named himeno
+# Target rules for targets named Himeno
 
 # Build rule for target.
 himeno: cmake_check_build_system
