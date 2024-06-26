@@ -4,7 +4,11 @@ AutoCheck is a dependency analysis tool, which aims to autmatically identify obj
 
 Docker setup
 ====
+<<<<<<< HEAD
 We *highly* recommend that the reviewers use the docker container for NO prerequisite
+=======
+We *highly* recommend that the reviewers use the docker container for NO prerequisite 
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 software installation, which could take a few hours to setup.
 
 1. Docker Pull Command
@@ -23,6 +27,7 @@ If you cannot use Docker, then read on. It may take a few hours to install the f
 Requirements:
 -------------------
 
+<<<<<<< HEAD
 1. LLVM-Tracer 1.2 (available for download [here](https://github.com/harvard-acc/LLVM-Tracer/tree/llvm-3.4), and follow
    the instructions on the page to install).
 2. CMake 3.5.1 or newer.
@@ -31,11 +36,25 @@ Requirements:
 Build:
 -------------------
 1. Clone AutoCheck
+=======
+  1. LLVM-Tracer 1.2 (available for download [here](https://github.com/harvard-acc/LLVM-Tracer/tree/llvm-3.4), and follow
+the instructions on the page to install).
+  2. CMake 3.5.1 or newer.
+  3. graphviz 2.38.0 or newer (available for download [here](https://graphviz.org)).
+
+Build:
+-------------------
+  1. Clone AutoCheck
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 ```
   git clone https://github.com/zRollman/Autocheck.git
   cd AutoCheck/
 ```
+<<<<<<< HEAD
 2. Install
+=======
+  2. Install
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 ```
   mkdir build/
   cd build
@@ -45,14 +64,24 @@ Build:
 
 Run:
 ------
+<<<<<<< HEAD
 We provide two scripts for testing (auto.sh and run.sh). With the auto.sh script
 all experiments performed in our paper are automatically executed and the results are  stored in the result directory (/workspace/AutoCheck/build/result).
 With the run.sh script, you can follow the script prompts to enter the trace file location and the information about the location of the
+=======
+We provide two scripts for testing (auto.sh and run.sh). With the auto.sh script 
+all experiments performed in our paper are automatically executed and the results are  stored in the result directory (/workspace/AutoCheck/build/result). 
+With the run.sh script, you can follow the script prompts to enter the trace file location and the information about the location of the 
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 main computation loop to perform a single benchmark test, and the results will be  stored in the result directory.
 
 Test with auto.sh:
 ------
+<<<<<<< HEAD
 1. Go to Autocheck
+=======
+1. Go to Autocheck 
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 ```
 cd /path/to/your/AutoCheck/build
 ```
@@ -63,7 +92,11 @@ cd /path/to/your/AutoCheck/build
 Test with run.sh:
 ------
 Example benchmark :Himeno
+<<<<<<< HEAD
 1. Go to Autocheck
+=======
+1. Go to Autocheck 
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 ```
 cd /path/to/your/AutoCheck/build
 ```
@@ -119,6 +152,7 @@ HACC | main | 0 | 318 | 523
 
 Validation:
 ------------
+<<<<<<< HEAD
 We provide a homemade library with C/R functionality, and we add C/R code to all 10 benchmarks.
 When executing our modified program, only need to add one parameter (0 to start the program
 normally, 1 to start the program from the checkpoint file) to invoke the C/R functionality.
@@ -128,6 +162,17 @@ benchmark three times (twice with the C/R code added and once with the original 
 First, we execute the program with the C/R code which will be interrupted by the fail-stop failure we simulated,
 then we restart the program with the data of the critical variables we stored in memory.
 Finally, we execute the original program and verify whether the program restarted successfully by comparing the
+=======
+We provide a homemade library with C/R functionality, and we add C/R code to all 10 benchmarks. 
+When executing our modified program, only need to add one parameter (0 to start the program 
+normally, 1 to start the program from the checkpoint file) to invoke the C/R functionality.
+
+To verify the correctness of the variables provided by AutoCheck for checkpointing, we run the same 
+benchmark three times (twice with the C/R code added and once with the original benchmark).
+First, we execute the program with the C/R code which will be interrupted by the fail-stop failure we simulated, 
+then we restart the program with the data of the critical variables we stored in memory. 
+Finally, we execute the original program and verify whether the program restarted successfully by comparing the 
+>>>>>>> 7daf469c1e019f8f8fb4fc1e15c9a311fcbda131
 execution result of the original program with the result of the restarted program.
 
 Example benchmark :Himeno
