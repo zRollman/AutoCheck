@@ -1,0 +1,3 @@
+/workspace/AutoCheck/build/CMakeFiles/edit_cache.dir
+/workspace/AutoCheck/build/CMakeFiles/AutoCheck.dir
+/workspace/AutoCheck/build/CMakeFiles/rebuild_cache.dir

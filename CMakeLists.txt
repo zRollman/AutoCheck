@@ -1,0 +1,40 @@
+cmake_minimum_required (VERSION 3.5.1)
+project ( AutoCheck CXX )
+
+FIND_PACKAGE( OpenMP REQUIRED)
+if(OPENMP_FOUND)
+message("OPENMP FOUND")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS"${CMAKE_EXE_LINKER_FLAGS}${OpenMP_EXE_LINKER_FLAGS}")
+endif()
+
+set ( PRJ_SRC_LIST )
+set ( PRJ_HEADER_LIST )
+set ( PRJ_LIBRARIES )
+set ( PRJ_INCLUDE_DIRS )
+set ( PRJ_COMPILE_OPTIONS )
+set ( PRJ_COMPILE_FEATURES )
+
+file ( GLOB root_header_files "${CMAKE_CURRENT_SOURCE_DIR}*.h" )
+file ( GLOB root_src_files "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" )
+
+list ( APPEND PRJ_HEADER_LIST ${root_header_files} )
+list ( APPEND PRJ_SRC_LIST ${root_src_files} )
+list ( APPEND PRJ_INCLUDE_DIRS ${OpenMP_CXX_INCLUDE_DIRS} )
+list ( APPEND PRJ_LIBRARIES ${OpenMP_CXX_LIBRARIES} )
+list ( APPEND PRJ_COMPILE_OPTIONS ${OpenMP_CXX_FLAGS} )
+#list ( APPEND PRJ_COMPILE_FEATURES cxx_std_14 )
+
+file(COPY /workspace/AutoCheck/Script/auto.sh DESTINATION ./)
+file(COPY /workspace/AutoCheck/Script/run.sh DESTINATION ./)
+file(COPY /workspace/AutoCheck/Script/set_env.sh DESTINATION ./)
+file(COPY /workspace/AutoCheck/Script/process.py DESTINATION ./)
+file(MAKE_DIRECTORY "build/result")
+#SET(CMAKE_CXX_FLAGS_RELEASE "-O3")
+#SET(CMAKE_CXX_FLAGS "-std=c++0x")
+#SET(CMAKE_C_COMPILER "/usr/bin/gcc")
+#SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
+
+add_executable ( ${PROJECT_NAME} ${PRJ_SRC_LIST} )
+

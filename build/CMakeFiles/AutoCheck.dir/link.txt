@@ -1,0 +1,1 @@
+/usr/bin/c++    -fopenmp   CMakeFiles/AutoCheck.dir/src/dependecy_info.cpp.o CMakeFiles/AutoCheck.dir/src/main.cpp.o CMakeFiles/AutoCheck.dir/src/variable_match.cpp.o CMakeFiles/AutoCheck.dir/src/get_info.cpp.o CMakeFiles/AutoCheck.dir/src/instr_info.cpp.o  -o AutoCheck 

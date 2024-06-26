@@ -1,0 +1,12 @@
+[basic]
+node_size                      = 2
+ckpt_dir                       = ./local
+glbl_dir                       = ./global
+meta_dir                       = ./meta
+
+[restart]
+failure                        = 0
+exec_id                        = 2024-05-12_02-50-28
+
+[advanced]
+block_size                     = 128

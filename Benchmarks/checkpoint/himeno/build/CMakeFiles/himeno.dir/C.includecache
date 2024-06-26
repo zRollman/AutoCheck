@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspace/Benchmarks/checkpoint/himeno/src/himenoBMT.c
+stdio.h
+-
+../../../libcheckpoint/checkpoint.h
+/workspace/Benchmarks/libcheckpoint/checkpoint.h
+sys/time.h
+-
+
+/workspace/Benchmarks/libcheckpoint/checkpoint.c
+stdlib.h
+-
+stdio.h
+-
+assert.h
+-
+string.h
+-
+limits.h
+-
+checkpoint.h
+/workspace/Benchmarks/libcheckpoint/checkpoint.h
+
+/workspace/Benchmarks/libcheckpoint/checkpoint.h
+
