@@ -73,7 +73,7 @@ cd /path/to/your/AutoCheck/build
 ```
 3. Enter the name of the trace file to be tested
 ```
-himeno
+Himeno
 ```
 4. Enable or disable OpenMP acceleration (on or off)
 ```
@@ -134,25 +134,25 @@ Example benchmark :Himeno
 ------------------------------------
 1. Go to Himeno's (with C/R enable)  working directory and compile the executable file
 ```
-cd /path/to/your/Benchmarks/checkpoint/himeno/build
+cd /path/to/your/Benchmarks/checkpoint/Himeno/build
 
 cmake .. && make
 ```
-2. Execute himeno
+2. Execute Himeno
 ```
-./himeno 0
+./Himeno 0
 ```
-3. Restart himeno
+3. Restart Himeno
 ```
-./himeno 1
+./Himeno 1
 ```
 4. Go to the working directory of the original Himeno program and compile it to get the executable file
 ```
-cd /path/to/your/Benchmarks/varify/himeno && make
+cd /path/to/your/Benchmarks/varify/Himeno && make
 ```
-5. Execute himeno
+5. Execute Himeno
 ```
-./himeno
+./Himeno
 ```
 
 
