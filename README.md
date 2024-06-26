@@ -9,11 +9,11 @@ software installation, which could take a few hours to setup.
 
 1. Docker Pull Command
 ```
-docker pull zhangwping/autocheck:latest
+docker pull zhangwping/vpautocheck:latest
 ```
 2. Create container
 ```
-docker run -it zhangwping/autocheck:latest /bin/bash
+docker run -it zhangwping/vpautocheck:latest /bin/bash
 ```
 
 Install with source code
