@@ -88,11 +88,11 @@ static float  wrk1[MIMAX][MJMAX][MKMAX],
 static int imax, jmax, kmax;
 static float omega;
 int world_rank,world_size;
-int
-main(int argc,int** argv)
+int main(int argc,int** argv)
 {
   MPI_Init(&argc, &argv);
-  FTI_Init("config.L1.fti", MPI_COMM_WORLD);
+  char *path = "./config.fti";
+  FTI_Init(path, MPI_COMM_WORLD);
   
   MPI_Comm_rank(FTI_COMM_WORLD,&world_rank);
   MPI_Comm_size(FTI_COMM_WORLD,&world_size);
@@ -138,7 +138,6 @@ main(int argc,int** argv)
   printf("Gosa : %e \n",gosa);
   printf("MFLOPS measured : %f\n",xmflops2);
   printf("Score based on MMX Pentium 200MHz : %f\n",score);
-    free(arr);
   FTI_Finalize();
   MPI_Finalize();
   return (0);

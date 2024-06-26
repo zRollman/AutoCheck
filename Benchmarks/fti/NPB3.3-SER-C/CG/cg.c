@@ -91,7 +91,8 @@ int main(int argc, char *argv[])
 {
 
   MPI_Init(&argc, &argv);
-  FTI_Init(argv[1], MPI_COMM_WORLD);
+  char *path = "./config.fti";
+  FTI_Init(path, MPI_COMM_WORLD);
   
   int world_rank,world_size;
   MPI_Comm_rank(FTI_COMM_WORLD,&world_rank);
